@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: pink ;
+            border: 2px solid black;
+            height: 500px;
+            /* default flex direction :column */
+            display: flex;
+            /* flex directions: row, column, row reverse, column reverse */
+            flex-direction: row;
+
+            /* even if we fix the width of the childs they will be sqeezed if space is not enough to overcome this we use flex-wrap = wrap or wrap reverse */
+            /* default = no-wrap */
+            /* flex-wrap: wrap;  */
+            /* flex flow is a shorthand for both flex direction and wrap */
+            /* flex-flow:row-reverse nowrap ; */
+
+            /* justify content alligns the items along main axis*/
+            justify-content: flex-start;
+            justify-content: flex-end;
+            justify-content: space-around;
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: center;
+
+            /* alighs the items along cross axis */
+            /* align-items: flex-start; */
+            align-items: flex-end;
+            align-items: stretch; /* default */
+            
+            align-items: center;
+            /* align-items: baseline; */
+
+            /* gap is a shorthand notation used to create gap between items */
+            /* gap: 20px; */
+
+            /* when items are aligned in multiple rows then to hadle the space b/w the items we use align content */
+            align-content: flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-evenly;
+            align-content: flex-start;
+            /* gap: 20px; */
+
+        }
+        .box{
+            border: 1px solid black;
+            width: 100px;
+            /* to grow the width of items */
+            /* flex-grow: 1; */
+
+            /* flex-shrink: 1; */
+
+        }
+        /* flex item properties: order, */
+        #box1{
+            order: 5;
+            /* flex-grow: 1; */
+            /* flex-shrink: 2; */
+            /* flex: shorthand notation for order, grow, shrink, basis */
+        }
+        #box2{
+            order: 3;
+            /* flex-grow: 2; */
+            /* flex basis= helps to allocate more width based on content */
+            flex-basis: 100px;
+        }
+        #box3{
+            order: 2;
+            /* flex-grow: 4; */
+            align-self: flex-end;
+        }
+        #box4{
+            order: 4;
+            align-self: stretch;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="box1">box-1</div>
+        <div class="box" id="box2">box-2</div>
+        <div class="box" id="box3">box-3</div>
+        <div class="box" id="box4">box-4</div>
+    </div>
+
+</body>
+</html>
