@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: yellow;
+    border: 3px solid red;
+    display: flex;
+}
+
+.box{
+    border: 2px solid green;
+    background-color: aqua;
+    height: 212px;
+    width: 212px;
+    margin: 10px;
+
+    animation-name: anim;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 4;
+    animation-delay: 1s;
+    animation-direction:normal ;
+    /* animation-direction:reverse ;
+    animation-direction:alternate ;
+    animation-direction:alternate-reverse ; */
+}
+
+/* @keyframes anim{
+    from{
+        width: 212px;
+    }
+    to{
+        width: 100%;
+    }
+} */
+
+@keyframes anim{
+    0%{
+        width: 212px;
+        background-color: aqua;
+    }
+    33%{
+        width: 33%;
+        background-color: orange;
+    }
+
+    66%{
+        width: 66%;
+        background-image: linear-gradient(to right, orange, white);
+
+    }
+    
+    100%{
+        width: 100%;
+        background-image: linear-gradient(to right, orange, white, green) ;
+    }
+}
