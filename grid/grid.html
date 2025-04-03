@@ -15,8 +15,13 @@
             height: auto;
             border: 2px solid black;
             display: grid;
+
+            /* 3 cols will be created with below mentioned width */
             /* grid-template-columns: 200px 200px 250px; */
+
             /* grid-template-columns: 1fr 1fr 2fr; */
+
+            /* 4 cols will be created , 2with 1fr , 1 with 2fr, 1 with 100px width */
             /* grid-template-columns: repeat(2, 1fr) 2fr 100px; */
             /* grid-template-columns: repeat(2, 1fr) 2fr; */
             /* grid-template-rows: 90px 90px 90px 90px; */
@@ -30,15 +35,37 @@
             /* height: 80px; */
             text-align: center;
         }
-        /* #box1{
-            grid-column-start: 1;
-            grid-column-end: 3;
+        #box1{
+
+            /* to span a single element from line 1 to line 3 of cols */
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
         }
         #box3{
-            grid-row-start: 2;
-            grid-row-end: 4;
-        } */
+            /* grid-row-start: 2;
+            grid-row-end: 4; */
+        }
          #box1, #box4{
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        /* layout */
+        .container2{
+            background-color: rgb(1, 81, 97);
+            height: auto;
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr;
+            grid-template-rows: 50px 500px 50px;
+            gap: 5px;
+        }
+        .boxx{
+            background-color: rgb(74, 210, 248);
+            border: 2px solid black;
+            text-align: center;
+        }
+        #boxx1, #boxx5{
             grid-column-start: 1;
             grid-column-end: 4;
         }
@@ -48,20 +75,30 @@
 <body>
     <!-- NOTE : flex box is related to content positioning, grid related to layout creation -->
 
-    <div class="container">
+    <!-- <div class="container">
         <div class="box" id="box1">Box1</div>
         <div class="box">Box2</div>
         <div class="box" id="box3">Box3</div>
         <div class="box" id="box5">Box5</div>
         <div class="box" id="box4">Box4</div>
-        <!-- <div class="box">Box5</div>
+        <div class="box">Box5</div>
         <div class="box">Box6</div>
         <div class="box">Box7</div>
         <div class="box">Box8</div>
         <div class="box">Box9</div>
-        <div class="box">Box10</div> -->
-        <!-- <div class="box">Box11</div> -->
+        <div class="box">Box10</div>
+        <div class="box">Box11</div>
+    </div> -->
+
+    <!-- practice layout -->
+    <div class="container2">
+        <div class="boxx" id="boxx1">box1</div>
+        <div class="boxx">box2</div>
+        <div class="boxx">box3</div>
+        <div class="boxx">box4</div>
+        <div class="boxx" id="boxx5">box5</div>
     </div>
+
 
 </body>
 </html>

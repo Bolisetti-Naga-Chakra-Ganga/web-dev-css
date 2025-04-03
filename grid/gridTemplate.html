@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridTemplate</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 400px;
+            border: 1px solid red;
+            background-color: yellow;
+            display: grid;
+
+            /* layout 1 code starts here*/
+            /* grid-template-rows: 30px 150px 400px 30px; */
+            /* grid-template-columns: 400px; */
+
+            /* grid-template-areas:  */
+            /* complete 1st row named as hd */
+            /* "hd" */
+            /* complete 2nd row named as side */
+            /* "side" */
+            /* complete 3rd row named as main */
+            /* "main"
+            "ft"; */
+            /* layout 1 ends here */
+
+            /* layout2 */
+            /* grid-template-columns: 200px 200px 200px 200px;
+            grid-template-rows: 250px 600px; */
+
+            /* 2 rows defined */
+            /* grid-template-areas:
+            "hd hd hd hd main main main main" */
+            /* "side side side side main main main main"
+            "side side side side main main main main" */
+            /* "side side side side ft ft ft ft" ; */
+
+            /* gridauto row */
+            grid-template-columns: 1fr 1fr 2fr;
+            grid-auto-rows: minmax(100px, 200px);
+        }
+        .box{
+            border: 2px solid black;
+            background-color: aqua;
+        }
+
+        /* header occupies complete hd area */
+        /* #header2{
+            grid-area: hd;
+        }
+        #footer2{
+            grid-area: ft;
+        }
+        #sidebar2{
+            grid-area: side;
+        }
+        #content2{
+            grid-area:main;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- layout 1 -->
+        <!-- <div class="box" id="header">header</div>
+        <div class="box" id="footer">footer</div>
+        <div class="box" id="sidebar">sidebar</div>
+        <div class="box" id="content">content</div> -->
+        <!-- layout 2 -->
+        <div class="box" id="header2">header</div>
+        <div class="box" id="footer2">footer</div>
+        <div class="box" id="sidebar2">sidebar</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <!-- <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div>
+        <div class="box" id="content2">content</div> -->
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    height: 500px;
+    width: 500px;
+    background-color: green;
+    border: 3px solid red;
+    display: flex;
+}
+
+.box{
+    border: 2px solid orange;
+    background-color: aqua;
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+
+    /* selecting all for transition prop is a bad practice */
+    /* transition-property: all; */
+
+    transition-property:background-color ;
+    /* transition-delay:2s ; */
+
+    /* transition shorthand ==>  transition: property duration trans-timing-func delay*/
+    /* transition: transform 3s ease 1s; */
+    /* transition: all 3s ease 1s; */
+    transition: transform 3s ease 1s;
+    transition: transform 3s ease-in 1s;
+    transition: transform 3s ease-out 1s;
+    transition: transform 3s linear 1s;
+    /* transition: transform 3s cubic-bezier(1, -0.77, 0.08, 1.13); */
+    /* transition: transform 3s cubic-bezier(0.06, 1.39, 0.72, 1.49); */
+}
+
+.box:hover{
+    background-color: brown;
+    transform:translate(501px) rotate(360deg);
+    /* transform: translate(250px); */
+}
